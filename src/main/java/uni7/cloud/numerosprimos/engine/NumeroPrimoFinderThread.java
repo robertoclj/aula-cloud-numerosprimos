@@ -26,23 +26,30 @@ public class NumeroPrimoFinderThread implements Runnable {
 
     public void procuraMaior(int x) {
 
-        x = x + 1;
-
-        if (primo(x)) {
+        if (primo(x) && x > MaiorNumeroPrimo.maior) {
             MaiorNumeroPrimo.maior = x;
             System.out.println(x);
         } else {
-            procuraMaior(x);
+            procuraMaior(MaiorNumeroPrimo.getMaiorTeste());
         }
     }
 
     public void run() {
         while(true) {
-            int x = MaiorNumeroPrimo.maior;
+            int x = MaiorNumeroPrimo.getMaiorTeste();
             procuraMaior(x);
 
             try {
-                Thread.sleep(50L);
+                if (x > 150000 && x <= 155000) {
+                    Thread.sleep(5000L);
+                } if (x > 300000 && x <= 305000) {
+                    Thread.sleep(5000L);
+                } if (x > 450000 && x <= 455000) {
+                    Thread.sleep(5000L);
+                } else {
+                    Thread.sleep(50L);
+                }
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
