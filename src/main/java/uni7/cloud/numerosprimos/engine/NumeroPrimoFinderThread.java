@@ -1,5 +1,7 @@
 package uni7.cloud.numerosprimos.engine;
 
+import uni7.cloud.numerosprimos.controller.maior.MaiorNumeroPrimo;
+
 /**
  * Created by robertoclj on 08/11/2017.
  */
@@ -26,23 +28,21 @@ public class NumeroPrimoFinderThread implements Runnable {
 
     public void procuraMaior(int x) {
 
-        if (primo(x) && x > MaiorNumeroPrimo.maior) {
-            MaiorNumeroPrimo.maior = x;
+        if (primo(x) && x > MaiorNumeroPrimoControlador.getMaiorEncontrado()) {
+            MaiorNumeroPrimoControlador.setNovoMaiorPrimo(x);
             System.out.println(x);
         } else {
-            procuraMaior(MaiorNumeroPrimo.getMaiorTeste());
+            procuraMaior(MaiorNumeroPrimoControlador.getProximoTeste());
         }
     }
 
     public void run() {
         while(true) {
-            int x = MaiorNumeroPrimo.getMaiorTeste();
+            int x = MaiorNumeroPrimoControlador.getProximoTeste();
             procuraMaior(x);
 
             try {
-                if (x > 150000 && x <= 155000) {
-                    Thread.sleep(5000L);
-                } if (x > 300000 && x <= 305000) {
+                if (x > 300000 && x <= 305000) {
                     Thread.sleep(5000L);
                 } if (x > 450000 && x <= 455000) {
                     Thread.sleep(5000L);
