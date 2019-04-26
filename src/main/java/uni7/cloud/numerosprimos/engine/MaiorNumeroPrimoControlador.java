@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
  */
 public class MaiorNumeroPrimoControlador {
 
-    private static final String host = "http://127.0.0.1:8080/numerosprimos";
+    private static final String host = "http://107.23.47.129:8080/numerosprimos";
 
     public synchronized static Integer getProximoTeste() {
 
