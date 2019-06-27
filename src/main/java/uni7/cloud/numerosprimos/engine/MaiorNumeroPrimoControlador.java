@@ -1,7 +1,5 @@
 package uni7.cloud.numerosprimos.engine;
 
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
@@ -11,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
  */
 public class MaiorNumeroPrimoControlador {
 
-    private static final String host = "http://107.23.47.129:8080/numerosprimos";
+    private static final String host = "http://3.219.96.30:8080/numerosprimos";
 
     public synchronized static Integer getProximoTeste() {
 

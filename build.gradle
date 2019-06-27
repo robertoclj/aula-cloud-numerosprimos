@@ -32,9 +32,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-tomcat')
 	compile("org.springframework.boot:spring-boot-devtools")
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 
 	compile group: 'net.spy', name: 'spymemcached', version: '2.12.3'
+	compile('org.postgresql:postgresql')
+	compile('org.projectlombok:lombok')
 
-
-	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
