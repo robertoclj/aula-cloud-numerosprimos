@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class MaiorNumeroPrimoController {
 
     @GetMapping(value = "/proximoteste")
-    public ResponseEntity<Integer> proximoTeste(){
+    public ResponseEntity<Integer> proximoTeste() {
         return new ResponseEntity<Integer>(MaiorNumeroPrimo.getProximoTeste(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/maior")
-    public ResponseEntity<Integer> maior(){
+    public ResponseEntity<Integer> maior() {
         return new ResponseEntity<Integer>(MaiorNumeroPrimo.getMaiorEncontrado(), HttpStatus.OK);
     }
 

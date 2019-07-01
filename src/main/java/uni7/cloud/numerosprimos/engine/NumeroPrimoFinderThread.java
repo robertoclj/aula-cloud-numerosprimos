@@ -37,14 +37,15 @@ public class NumeroPrimoFinderThread implements Runnable {
     }
 
     public void run() {
-        while(true) {
+        while (true) {
             int x = MaiorNumeroPrimoControlador.getProximoTeste();
             procuraMaior(x);
 
             try {
                 if (x > 300000 && x <= 305000) {
                     Thread.sleep(5000L);
-                } if (x > 450000 && x <= 455000) {
+                }
+                if (x > 450000 && x <= 455000) {
                     Thread.sleep(5000L);
                 } else {
                     Thread.sleep(50L);
@@ -55,7 +56,6 @@ public class NumeroPrimoFinderThread implements Runnable {
             }
         }
     }
-
 
 
 }

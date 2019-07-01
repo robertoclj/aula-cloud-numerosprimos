@@ -21,7 +21,7 @@ public class NumeroPrimoController {
     private NumeroPrimoEncontradoRepository numeroPrimoEncontradoRepository;
 
     @GetMapping(value = "/home")
-    public ModelAndView list(){
+    public ModelAndView list() {
 
         Integer maior = MaiorNumeroPrimoControlador.getMaiorEncontrado();
         NumeroPrimoEncontrado numeroPrimoEncontrado = new NumeroPrimoEncontrado();
